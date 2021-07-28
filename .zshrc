@@ -115,6 +115,7 @@ unset __conda_setup
 
 alias journal="cd ~/notes && sh ~/.scripts/journal/journal.sh"
 alias save="sh ~/.scripts/journal/save_journal.sh"
+alias todo="sh ~/.scripts/todo/todo.sh"
 alias weekly="sh ~/.scripts/weekly/weekly.sh"
 alias ls="exa -al"
 alias duck="sh ~/.scripts/duck.sh"
