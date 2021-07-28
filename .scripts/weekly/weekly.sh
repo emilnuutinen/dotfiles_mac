@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # filename
-filename=week_$(gdate -d "last week" "+%V").md
+filename=weekly_w$(gdate -d "last week" "+%V").md
 
 # current year
 year=$(gdate -d "last monday" "+%Y")
