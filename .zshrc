@@ -113,7 +113,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-alias journal="cd ~/notes && sh ~/.scripts/journal/journal.sh"
+alias journal="sh ~/.scripts/journal/load_journal.sh && sh ~/.scripts/journal/journal.sh"
 alias save="sh ~/.scripts/journal/save_journal.sh"
 alias todo="sh ~/.scripts/todo/todo.sh"
 alias weekly="sh ~/.scripts/weekly/weekly.sh"
