@@ -58,6 +58,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 set ignorecase
 set smartcase
 
+
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -91,8 +92,14 @@ nmap <silent> <Up> gk
 " Use system clipboard
 set clipboard=unnamedplus,unnamed,autoselect
 
-" Insert heading with a timestamp and subject in markdown
+" Insert bolded text with a timestamp and subject in markdown
 imap <silent> <F1> <C-R>=strftime("**%H:%M:%S - **")<CR><C-o>:cal cursor(0,14)<CR>
+
+" Insert a new todo template
+imap <silent> <F2> <C-R>="- [ ] +.. "<CR><C-o>:cal cursor(0,12)<CR>
+
+" Insert heading with todays date in markdown
+imap <silent> <F3> <C-R>=strftime("### %d-%m-%Y")<CR>
 
 " 1 tab is 4 spaces
 set tabstop=4
@@ -122,7 +129,7 @@ set breakindent
 set linebreak
 
 " Always show 10 lines before and after cursor
-set scrolloff=10
+"set scrolloff=10
 
 " Scroll past lastline
 set display+=lastline
@@ -217,6 +224,7 @@ autocmd filetype markdown setlocal nonumber
 autocmd filetype markdown setlocal conceallevel=2
 autocmd filetype netrw setlocal statusline=%1*%=%l/%L
 autocmd filetype markdown setlocal statusline=%{StatuslineMD()}
+autocmd filetype markdown setlocal spell spelllang=en
 
 " File explorer
 let g:netrw_banner=0
